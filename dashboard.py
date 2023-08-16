@@ -222,15 +222,14 @@ def handle_query(query):
 
 # Initialize screen state
 if 'screen' not in st.session_state:
-    st.session_state.screen = 1
+    st.session_state.screen = 2
 
 # Screen 1: Welcome Screen
 if st.session_state.screen == 1:
     st.markdown("# Azure App Insights Visualizer Tool")
-    st.markdown("*(Insert your animations here)*")
 
     st.button("Start", on_click=on_start_select, key="start_button_welcome")
-    st.button("How To Use", on_click=on_how_to_use_select, key="how_to_use_button_welcome")
+    # st.button("How To Use", on_click=on_how_to_use_select, key="how_to_use_button_welcome")
 
 # Screen 2: Main Functionality
 elif st.session_state.screen == 2:
